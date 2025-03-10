@@ -224,6 +224,7 @@ font-size: 22px;
   }
 
 .container-cartas{
+width: 400px!important;
 display: flex;
 justify-content: center;
 justify-items: center;
@@ -233,5 +234,14 @@ background-color: #000000;
   }
   
 
+  .container-rodape{
+    padding: 40px;
+      color: white;
+      margin-top: 225px!important;
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      background-color: rgba(41, 7, 73, 0.969);
+  }
 
 }
