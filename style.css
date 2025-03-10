@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+  
+    background-image: url(./img/fundo2.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -180px;
+    background-repeat: no-repeat;
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 5px;
+}
+
+.memory-card {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.memory-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    
+}
+
+
+.container-titulo{
+
+  font-family: cursive;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    color: white;
+    background-color: rgb(52, 5, 79);
+}
+
+.container-botao-recomeçar{
+    padding: 20px;
+   margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    
+    color: rgb(246, 240, 240);
+}
+
+
+.botao-diamante {
+    width: 100px;
+    height: 100px;
+    background-color: #9d08ca; /* Cor azul padrão */
+    color: white;
+    border: solid 5px;
+    cursor: pointer;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease; /* Adiciona uma transição suave */
+  }
+  
+  .botao-diamante:hover {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background-color: #720e90; /* Cor roxa no hover */
+    color: rgb(255, 255, 255);
+  }
+
+
+
+
+.container-cartas{
+   
+ margin-top: 10px;
+display: flex;
+justify-content: center;
+flex-direction: row;
+padding: 5px 5px 5px;
+border-radius: 10px;
+background-color: rgba(0, 0, 0, 0.587);
+   
+}
+
+
+
+
+
+
+.Frontpar1{
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    background-size: contain;
+}
+
+.Backpar1{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-size: contain;
+}
+
+.front-face {
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+
+.back-face {
+    background-color: #ccc;
+}
+
+
+.front-face:hover {
+    background-color: #430562;
+    transform: rotateY(180deg);
+}
+
+.back-face:hover {
+  transition: 0.4s;
+   border: solid 2px ;
+   border-color: rgb(255, 255, 255);
+    background-color: #000000da;
+    box-shadow: #000000;
+}
+
+
+
+
+
+
+
+.container-rodape{
+    color: white;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background-color: rgba(41, 7, 73, 0.969);
+}
+
+.folhas-container {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 410px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite interagir com elementos abaixo */
+    overflow: hidden; /* Evita que as folhas saiam da tela */
+    z-index: 5999;
+  }
+  
+  .folha {
+    position: absolute;
+    width: 20px; /* Ajuste o tamanho das folhas */
+    animation: queda 5s linear infinite; /* Cria a animação de queda */
+  }
+  
+  @keyframes queda {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+  @media (max-width: 415px) {
+    .folhas-container{
+  
+   
+    position: fixed;
+    top: 0;
+    left: 100px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite interagir com elementos abaixo */
+    overflow: hidden; /* Evita que as folhas saiam da tela */
+    z-index: 5999;
+    }
+      
+.container-botao-recomeçar{
+    padding: 0px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    
+    color: rgb(246, 240, 240);
+}
+ 
+
+.container-titulo h1{
+font-size: 22px;
+    font-family: cursive;
+     
+  }
+  
+.container-rodape{
+    padding: 10px;
+    margin-top: 5px;
+}
+
+}
