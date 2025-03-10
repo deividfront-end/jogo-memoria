@@ -1,12 +1,8 @@
 body {
     margin: 0;
-  
     background-image: url(./img/fundo2.jpg);
     background-size: cover;
-    background-position-x: center;
-    background-position-y: -180px;
-    background-repeat: no-repeat;
-}
+    background-repeat: no-repeat;background-color: #210131;}
 
 .memory-game {
     display: grid;
@@ -146,8 +142,9 @@ background-color: rgba(0, 0, 0, 0.587);
 
 
 .container-rodape{
+  padding: 40px;
     color: white;
-    margin-top: 12px;
+    margin-top: 245px;
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -225,10 +222,16 @@ font-size: 22px;
     font-family: cursive;
      
   }
+
+.container-cartas{
+display: flex;
+justify-content: center;
+justify-items: center;
+margin-bottom: 0px;
+background-color: #000000;
+
+  }
   
-.container-rodape{
-    padding: 10px;
-    margin-top: 5px;
-}
+
 
 }
